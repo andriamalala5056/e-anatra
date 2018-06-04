@@ -13,3 +13,86 @@
  *= require_tree .
  *= require_self
  */
+.search-bar-container {
+	width: 100%;
+	padding: 40px;
+	margin-top: 60px;
+}
+
+.logo {
+	width: 165px;
+    height: 36px;
+    margin: 10px 10px 10px 0px;
+}
+
+.maxwdth {
+	width: 100%;
+	padding: 40px;
+}
+
+.blue {
+	background-color: #15465e;
+}
+
+.bg-perso {
+	background-color: #fad23a;
+}
+
+.no-border {
+	border-bottom-style: none;
+}
+
+.connexion-btn {
+	background-color: #15465e;
+	color: #FFF;
+}
+
+.search-box-btn {
+	color: #6c757d;
+    background-color: #fad23a;
+    background-image: none;
+    border-left-color: #6c757d;
+    border-top-color: #fad23a;
+    border-right-color: #fad23a;
+    border-bottom-color: #fad23a;
+}
+
+option {
+	background-color: #ffeb9e;
+}
+
+h1 {
+	color: #fad23a;
+	font-weight: bold;
+}
+
+.navbar-new {
+	position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 10px 0px 10px 10px;
+    z-index: 10000000;
+}
+
+.auto-width-for-resp {
+	width: 100%;
+	min-width: 400px;
+}
+
+.login-container-home-bcgrnd {
+	background-image: url(/img/smile.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 500px;
+	background-position-y: -260px;
+}
+
+.login-row {
+	margin-bottom: 20px;
+}
