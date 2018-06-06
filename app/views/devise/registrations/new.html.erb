@@ -1,0 +1,151 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= devise_error_messages! %>
+
+<!-- CONTENT TEST START -->
+<div class="login-container-home-bcgrnd">
+   <div class="container">
+      <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 200px;">
+         <div class="p-2 bd-highlight white-bcgrnd-log">
+            <!-- CONTEN FOR LOGIN -->
+            <ul id="tabsJustified" class="nav nav-tabs">
+               <li class="nav-item"><a href="" data-target="#student" data-toggle="tab" class="nav-link small text-uppercase back-nav-log">étudiants</a></li>
+               <li class="nav-item"><a href="" data-target="#responsable" data-toggle="tab" class="nav-link small text-uppercase back-nav-log">résponsables</a></li>
+            </ul>
+            <br>
+            <div id="tabsJustifiedContent" class="tab-content">
+               <!-- STUDENT LOGIN START -->
+               <div id="student" class="tab-pane fade active show">
+                  <form>
+                     <div class="row login-row">
+                        <div class="col">
+                           <%= f.text_field :nom, autofocus: true, class: "form-control", placeholder: "Nom" %>
+                        </div>
+                        <div class="col">
+                           <%= f.text_field :prenom, class: "form-control", placeholder: "Prénom" %>
+                        </div>
+                     </div>
+                     <div class="row login-row">
+                        <div class="col">
+                           <%= f.select(:sexe, ['Sexe...', 'Homme', 'Femme'], {}, {:class => "form-control"}) %>
+                           <!--select id="inputState" ">
+                              <option selected>Sexe...</option>
+                              <option>Homme</option>
+                              <option>Femme</option>
+                           </select-->
+                        </div>
+                        <div class="input-group col">
+                           <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroup-sizing-default">Né(e) le</span>
+                           </div>
+                           <%= f.text_field :telephone, class: "form-control", placeholder: "JJ/MM/AAAA" %>
+                        </div>
+                     </div>
+                     <div class="row login-row">
+                        <div class="col">
+                           <%= f.text_field :adresse, class: "form-control", id: "formGroupExampleInput", placeholder: "Adresse" %>
+                        </div>
+                     </div>
+                     <div class="row login-row">
+                        <div class="col">
+                           <%= f.email_field :email, autocomplete: "email", class: "form-control", id: "formGroupExampleInput", placeholder: "Adresse e-mail" %>
+                        </div>
+                     </div>
+                     <div class="input-group login-row">
+                        <div class="input-group-prepend">
+                           <span class="input-group-text" id="inputGroup-sizing-default">+261</span>
+                        </div>
+                        <%= f.number_field :telephone, class: "form-control", placeholder: "Téléphone" %>
+                     </div>
+                     <div class="row login-row">
+                        <div class="col">
+                           <%= f.password_field :password, autocomplete: "off", class: "form-control", id: "formGroupExampleInput", placeholder: "Mot de passe" %>
+                        </div>
+                     </div>
+                     <div class="row login-row">
+                        <div class="col">
+                           <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", id: "formGroupExampleInput", placeholder: "Comfirmez votre mot de passe" %>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col">
+                           <button type="submit" class="btn connexion-btn maxwidth-btn" data-toggle="modal" data-target=".bd-example-modal-lg">Créer un compte</button>
+                        </div>
+                        <div class="col">
+                          <a href="/users/sign_in">
+                           <button type="button" class="btn connexion-btn maxwidth-btn" data-toggle="modal" data-target=".bd-example-modal-lg">Se connecter</button>
+                          </a>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <!-- STUDENT LOGIN END -->
+               <!-- RESPONSABLE LOGIN START -->
+               <div id="responsable" class="tab-pane fade">
+                  <form>
+                     <div class="row login-row">
+                        <div class="col">
+                           <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nom de l'établissement">
+                        </div>
+                     </div>
+                     <div class="row login-row">
+                        <div class="col">
+                           <select id="inputState" class="form-control">
+                              <option selected>Antananarivo</option>
+                              <option value="1">Antsiranana</option>
+                              <option value="2">Mahajanga</option>
+                              <option value="3">Toamasina</option>
+                              <option value="4">Fianarantsoa</option>
+                              <option value="5">Toliary</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="row login-row">
+                        <div class="col">
+                           <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Adresse">
+                        </div>
+                     </div>
+                     <div class="row login-row">
+                        <div class="col">
+                           <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Adresse e-mail">
+                        </div>
+                     </div>
+                     <div class="input-group login-row">
+                        <div class="input-group-prepend">
+                           <span class="input-group-text" id="inputGroup-sizing-default">+261</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Téléphone">
+                     </div>
+                     <div class="row login-row">
+                        <div class="col">
+                           <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Mot de passe">
+                        </div>
+                     </div>
+                     <div class="row login-row">
+                        <div class="col">
+                           <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Comfirmez votre mot de passe">
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col">
+                           <button type="button" class="btn connexion-btn maxwidth-btn" data-toggle="modal" data-target=".bd-example-modal-lg">Créer un compte</button>
+                        </div>
+                        <div class="col">
+                           <button type="button" class="btn connexion-btn maxwidth-btn" data-toggle="modal" data-target=".bd-example-modal-lg">Se connecter</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <!-- RESPONSABLE LOGIN END -->
+            </div>
+            <!--div class="mt-auto p-2 bd-highlight">
+               <button type="button" class="btn connexion-btn" data-toggle="modal" data-target=".bd-example-modal-lg">Valider</button>
+               </div-->
+            <!-- CONTENT FOR LOGIN END -->
+         </div>
+         <!--div class="p-2 bd-highlight">Flex item</div-->
+      </div>
+   </div>
+</div>
+<!-- CONTENT TEST END -->
+<% end %>
+<%= render "devise/shared/links" %>

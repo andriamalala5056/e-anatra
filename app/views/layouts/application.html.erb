@@ -9,6 +9,9 @@
     <!-- TAB FOR LOGIN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- DATE PICKER FOR LOGIN -->
+    <script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"-->
 
     <!-- BOOTSTRAP EN LOCALE -->
@@ -19,6 +22,9 @@
   </head>
 
   <body>
+      <!-- LOGIN MESSAGE -->
+      <%= notice %>
+      <%= alert %>
     <!-- NAVBAR MENU -->
     <div class="shadow-sm fixed-top bg-perso">
       <div class="container">
@@ -55,6 +61,14 @@
                     <li class="nav-item">
                       <a class="nav-link" href="#">Nous contacter</a>
                     </li>
+                    <!-- USER RENDER -->
+                    <%= if user_signed_in?
+                        render partial: 'layouts/with_user'
+                     else  
+                        render partial: 'layouts/without_user'
+                     end 
+                    %>
+                    <!-- USER RENDER END -->
                   </ul>
                 </div>
                 <!-- LOGIN BUTTON START -->
@@ -66,6 +80,36 @@
       </div>
     </div>
     <!-- NAVBAR MENU END -->
+    <!-- SECTION SEARCH START -->
+    <div class="search-bar-container blue">
+      <div class="container">
+        <div class="row">
+          <div class="col align-self-center">
+            <div class="input-group">
+              <select class="custom-select" id="inputGroupSelect04">
+                <option selected>Antananarivo</option>
+                <option value="1">Antsiranana</option>
+                <option value="2">Mahajanga</option>
+                <option value="3">Toamasina</option>
+                <option value="4">Fianarantsoa</option>
+                <option value="5">Toliary</option>
+              </select>
+              <select class="custom-select" id="inputGroupSelect04">
+                <option selected>Enseignement générale</option>
+                <option value="1">Université</option>
+                <option value="2">Musique</option>
+                <option value="3">Cours</option>
+              </select>
+              <input type="text" class="form-control no-border" placeholder="Mots clé..." aria-label="Mots clé" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn search-box-btn" type="button">Recherche</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SECTION SEARCH END -->
     <%= yield %>
   </body>
 

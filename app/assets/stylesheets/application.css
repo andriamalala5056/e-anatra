@@ -16,7 +16,6 @@
 .search-bar-container {
 	width: 100%;
 	padding: 40px;
-	margin-top: 60px;
 }
 
 .logo {
@@ -80,19 +79,40 @@ h1 {
     z-index: 10000000;
 }
 
-.auto-width-for-resp {
-	width: 100%;
-	min-width: 400px;
-}
-
 .login-container-home-bcgrnd {
 	background-image: url(/img/smile.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 500px;
+	min-height: 591px;
 	background-position-y: -260px;
+	margin-bottom: -16px;
 }
 
 .login-row {
 	margin-bottom: 20px;
+}
+
+.back-nav {
+	background-color: #fad23a;
+}
+
+.white-bcgrnd-log {
+	background-color: #FFF;
+	margin: 35px 0px 35px 0px;
+}
+
+.back-nav-log {
+	background-color: transparent;
+}
+
+a {
+	color: #15465e;
+}
+
+.maxwidth-btn {
+	width: 100%;
+}
+
+body {
+	padding-top: 60px;
 }
