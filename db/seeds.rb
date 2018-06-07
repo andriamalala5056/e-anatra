@@ -22,3 +22,12 @@ a1.etablissement=e1
 a1.save
 
 =end
+
+f1 = Filiere.create(nom:"Gestion", description:"blablabla gestion")
+f2 = Filiere.create(nom:"Informatique", description:"blablabla informatique")
+f3 = Filiere.create(nom:"Paramed", description:"blablabla paramed")
+
+fe1=AssociateFiliereEtab.new
+fe1.filiere=Filiere.first
+fe1.etablissement = Etablissement.first
+fe1.save
