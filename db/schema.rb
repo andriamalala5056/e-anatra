@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-#<<<<<<< HEAD
-#<<<<<<< HEAD
-#ActiveRecord::Schema.define(version: 2018_06_07_152147) do
-#=======
-#ActiveRecord::Schema.define(version: 2018_06_07_145348) do
-#>>>>>>> a6af52f9e40ab727e53a28ff4b24baec1e7f6959
-#=======
 ActiveRecord::Schema.define(version: 2018_06_07_171820) do
-#>>>>>>> fenitra
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"

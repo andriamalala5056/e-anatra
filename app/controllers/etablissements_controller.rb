@@ -15,9 +15,9 @@ class EtablissementsController < ApplicationController
   def create
     @etablissement = Etablissement.new(etablissement_params)
     if @etablissement.save
-      render "index"
+      redirect_to etablissements_path
     else
-      render "new"
+      redirect_to etablissements_path
     end
   end
 
