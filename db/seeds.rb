@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+=begin
+
 u1=User.create(nom:"a", prenom:"a",email:"a@a.com",password:"aaaaaa",telephone:"0341111111", adresse:"amboma", sexe:"homme",date_de_naissance:"1990/08/09")
 u2=User.create(nom:"b", prenom:"b",email:"b@b.com",password:"bbbbbb",telephone:"0342222222", adresse:"tsiadana", sexe:"femme",date_de_naissance:"1991/08/09")
 u3=User.create(nom:"c", prenom:"c",email:"c@c.com",password:"cccccc",telephone:"0343333333", adresse:"tsiadana", sexe:"femme",date_de_naissance:"1993/08/09")
@@ -18,3 +20,5 @@ a1=AssociateUserEtab.new
 a1.user=u1
 a1.etablissement=e1
 a1.save
+
+=end
