@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_06_07_152147) do
+=======
+ActiveRecord::Schema.define(version: 2018_06_07_145348) do
+>>>>>>> a6af52f9e40ab727e53a28ff4b24baec1e7f6959
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +39,10 @@ ActiveRecord::Schema.define(version: 2018_06_07_152147) do
     t.float "latitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "dossier_a_fournir_file_name"
+    t.string "dossier_a_fournir_content_type"
+    t.integer "dossier_a_fournir_file_size"
+    t.datetime "dossier_a_fournir_updated_at"
   end
 
   create_table "filieres", force: :cascade do |t|

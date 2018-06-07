@@ -1,2 +1,3 @@
-<h1>Etablissements#index</h1>
-<p>Find me in app/views/etablissements/index.html.erb</p>
+<% @etablissements.each do |etablissement| %>
+    Nom : <%= etablissement.nom %>
+<% end %>
