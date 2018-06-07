@@ -1,3 +1,4 @@
-<% @etablissements.each do |etablissement| %>
-    Nom : <%= etablissement.nom %>
+<% @etablissements.each do |etab| %>
+    Nom : <%= etab.nom %>
+    <%= link_to "Voir la société", etablissement_path(etab.id) %>
 <% end %>
