@@ -21,4 +21,41 @@ a1.user=u1
 a1.etablissement=e1
 a1.save
 
+f1 = Filiere.create(nom:"Gestion", description:"blablabla gestion")
+f2 = Filiere.create(nom:"Informatique", description:"blablabla informatique")
+f3 = Filiere.create(nom:"Paramed", description:"blablabla paramed")
+
+fe1=AssociateFiliereEtab.new
+fe1.filiere=Filiere.first
+fe1.etablissement = Etablissement.first
+fe1.save
+
+n1=Niveau.create(niveau:"1", place:300)
+n2=Niveau.create(niveau:"2", place:150)
+
+ne = AssociateNiveauEtab.new
+ne.etablissement = Etablissement.first
+ne.niveau = Niveau.first
+ne.save
+
+e=Etablissement.find(2)
+a=Article.new
+a.titre="a"
+a.message="a"
+a.photo="a"
+a.etablissement = e
+a.save
+
+r=Role.new
+r.role = "etudiant"
+r.save
+
+u = User.first
+u.role = r
+u.save
+
 =end
+
+r=Role.new
+r.role = "responsable"
+r.save
