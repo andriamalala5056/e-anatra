@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_05_071507) do
+ActiveRecord::Schema.define(version: 2018_06_07_145347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "associate_user_etabs", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "etablissement_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["etablissement_id"], name: "index_associate_user_etabs_on_etablissement_id"
+    t.index ["user_id"], name: "index_associate_user_etabs_on_user_id"
+  end
+
+  create_table "etablissements", force: :cascade do |t|
+    t.string "nom"
+    t.string "mail"
+    t.string "telephone"
+    t.string "adress"
+    t.text "description"
+    t.string "category"
+    t.float "longitude"
+    t.float "latitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -38,4 +60,6 @@ ActiveRecord::Schema.define(version: 2018_06_05_071507) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "associate_user_etabs", "etablissements"
+  add_foreign_key "associate_user_etabs", "users"
 end
