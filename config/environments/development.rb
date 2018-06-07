@@ -60,10 +60,10 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: 'gmail.com'
-    port: 1025
-  }
 
+#end
+#=======
+  
+  Paperclip.options[:command_path] = "/usr/bin/"
 end
+#>>>>>>> d3a51fb4b0a11c9b4c30d670ef675c8d50935b2b
